@@ -24,4 +24,4 @@ function fearNotLetter(str) {
   
 }
 
-console.log(fearNotLetter("abce"));
+console.log(fearNotLetter("abc"));
