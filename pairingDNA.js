@@ -23,31 +23,30 @@
 //5 Repeat step 3 for additional chars.
 //6 Return strand
 
-function pairDna(str) {
+function pairElement(str) {
+ 
     var strSplit = str.split("");
-    console.log(strSplit);
     var newArray = [];
-    console.log(newArray);
-    var firstChar = strSplit[1];
-    console.log(firstChar);
+	var currChar;
     for (var i = 0; i < strSplit.length ; i++) {
-        if (firstChar[i] === "G"){
-            newArray.push(["G,C"]);
-            console.log(newArray);
-         }
-       else if (firstChar[i] === "C") {
-           newArray.push(["C,G"]);
-           console.log(newArray);
-       }
-       else if (firstChar[i] === "A") {
-           newArray.push(["A,T"]);
-           console.log(newArray);
-           }
-       else if (firstChar[i] === "T") {
-           newArray.push(["T,A"]);
-           console.log(newArray);
-       } 
-    }
-    return newArray;
+		currChar = strSplit[i];
+		if ( currChar=== "G"){
+			newArray.push(["G","C"]);
+		}
+		else if (currChar === "C") {
+		   newArray.push(["C","G"]);
+		}
+		else if (currChar === "A") {
+		   newArray.push(["A","T"]);
+		}
+		else if (currChar === "T") {
+		   newArray.push(["T","A"]);
+		} 
+	}
+	//console.log(newArray.toString());
+	console.log(newArray);
+	return newArray;
+
 }
-pairDna("GCG");
+
+pairElement("GCG");
