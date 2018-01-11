@@ -10,7 +10,8 @@
 //	Is prime
 
 function isPrime(num){
- for (var n = 2; n < num; n++){
+ for (var n = 2; n < num; n++){//start a loop that bigins at 2 and ends right 
+ //num, increase 2 +1 each time through.
    if(num % n == 0){
      return false; //number is not prime 
    }
@@ -28,21 +29,24 @@ function isPrime(num){
 //	Print running total
 function sumPrimes(num) {
  
- var total = 0;
+ var total = 0;// create a running total
  for(var n = 2; n <= num; n++){
    console.log("iteration:", n);
    if(isPrime(n)){
      console.log(n, "is prime");
      total = total + n;
+     
      continue;
    }
    console.log("looping");
  }
- return total;
-}
+
+ console.log(total);
+  return total;
+ }
 
  //console.log("2", isPrime(2));
  //console.log("5", isPrime(5));
  //console.log("9", isPrime(9));
-console.log("977", isPrime(977));
-sumPrimes(977);
+//console.log("977", isPrime(977));
+sumPrimes(10);
