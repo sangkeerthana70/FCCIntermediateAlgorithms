@@ -33,3 +33,5 @@ function convertHTML(str) {
 	console.log(reStr);
 	return reStr; 
 }	
+
+convertHTML("Hamburgers < Pizza < Tacos");
