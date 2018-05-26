@@ -1,14 +1,16 @@
 function addTogether() {
-    var numOne = arguments[0]
+    var numOne = arguments[0];
     if (typeof(numOne) !== 'number') {
         return undefined;
     }
     
     if (arguments.length === 2) {
         if (typeof(arguments[1]) === 'number') {
-            return numOne + arguments[1];
+            var sum =  numOne + arguments[1];
+            console.log(sum);
+            return sum;
         }
-        return undefined;
+        return undefined; 
     }
     
     return function() {
@@ -17,7 +19,7 @@ function addTogether() {
     
 }
 
-addTogether(2,3);
+addTogether(2, 3);
 
 //must be numbers
 //if 2 sent add together
