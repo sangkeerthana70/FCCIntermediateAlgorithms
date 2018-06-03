@@ -25,10 +25,10 @@ function flatten(input,output)
 {
 	for (var i=0; i<input.length; i++)
 	{
-		currElem = input[i];
+		var currElem = input[i];
 		if (Array.isArray(currElem))
 		{
-			flatten(currElem,output)
+			flatten(currElem,output);
 		}
 		else
 		{
